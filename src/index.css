@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    to bottom,
+    #00a2d6,
+    #00aed7,
+    #00bad4,
+    #00c4cc,
+    #00cec2,
+    #0dd4ba,
+    #29dab0,
+    #43dfa3,
+    #5ce39c,
+    #71e795,
+    #85ea8e,
+    #98ed87
+  );
+}

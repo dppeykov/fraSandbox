@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Russo+One&display=swap");
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Russo One", sans-serif;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  margin: 30px 50px;
+}
+
+.sign-in {
+  font-size: 1.7rem;
+}
+
+@media screen and (max-width: 414px) {
+  .navigation-container {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .logo {
+    height: 75px;
+    margin-bottom: 10px;
+  }
+
+  .sign-in {
+    font-size: 1.2rem;
+  }
+}
