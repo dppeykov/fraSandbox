@@ -25,3 +25,8 @@ body {
     #98ed87
   );
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+}
