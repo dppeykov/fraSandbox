@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Navigation from "../../components/Navigation/Navigation";
+import Navigation from "../Navigation/Navigation";
+import ImageLinkForm from "../ImageLinkForm/ImageLinkForm";
 
 class App extends Component {
   constructor() {
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navigation />
+        <ImageLinkForm />
       </div>
     );
   }
