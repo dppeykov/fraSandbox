@@ -6,6 +6,7 @@ import ImageLinkForm from "../../components/ImageLinkForm/ImageLinkForm";
 import FaceRecognition from "../../components/FaceRecognition/FaceRecognition"
 
 // run npm install clarifai
+// http://ericsusch.com/blog1/wp-content/uploads/2018/06/Man-Concentrated-1000x1000.jpg  -->> testing image
 
 
 // const app = new Clarifai.App({
@@ -29,7 +30,7 @@ class App extends Component {
 
     // app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input).then(
     // function(response) {
-    //   // do something with response
+    //   response.outputs[0].data.regions[0].region_info.bounding_box
     // },
     // function(err) {
     //   // there was an error
