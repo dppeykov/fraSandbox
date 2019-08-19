@@ -2,18 +2,15 @@ import React, { Component } from "react";
 import Navigation from "../../components/Navigation/Navigation";
 import Rank from "../../components/Rank/Rank"
 import ImageLinkForm from "../../components/ImageLinkForm/ImageLinkForm";
-// import Clarifai from 'clarifai';
+import Clarifai from "clarifai";
 import FaceRecognition from "../../components/FaceRecognition/FaceRecognition";
 import SignIn from "../../components/SignIn/SignIn";
 import Register from "../../components/Register/Register";
 
-// run npm install clarifai
-// http://ericsusch.com/blog1/wp-content/uploads/2018/06/Man-Concentrated-1000x1000.jpg  -->> testing image
 
-
-// const app = new Clarifai.App({
-//   apiKey: '06d95d6f6ecc41168836bd1818223c47'
-//  });
+const app = new Clarifai.App({
+  apiKey: '06d95d6f6ecc41168836bd1818223c47'
+ });
 
 class App extends Component {
   constructor() {
@@ -50,10 +47,9 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
 
-    // app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
-    //  .then(response => this.displayFaceBox(this.calculateFaceLocation(response)));
-    //  .catch(err => console.log(err));
-  //);
+    app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
+     .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
+     .catch(err => console.log(err));
   }
 
   onRouteChange = (route) => {
