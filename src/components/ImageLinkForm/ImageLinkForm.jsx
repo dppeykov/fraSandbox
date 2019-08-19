@@ -10,7 +10,7 @@ const ImageLinkForm = ({ onInputChange, onButtonSubmit }) => (
     </p>
     <div className="center">
       <div className="form center ma2">
-        <input className="f4 pa2 w-75 center br4 br--left" type="text" onChange={onInputChange}/>
+        <input className="f4 pa2 w-75 center br4 br--left" type="text" onChange={onInputChange} placeholder="Enter URL here ..."/>
         <button className="w-25 grow f5 br4 br--right link ph3 pv2 dib white bg-orange pointer" onClick={onButtonSubmit}>
           Detect
         </button>
