@@ -7,15 +7,21 @@ class App extends Component {
   constructor() {
     super();
 
-    this.state = {};
+    this.state = {
+      input: '',
+    };
   }
+
+  onInputChange = e => this.setState({input: e.target.value})
+
+  onButtonSubmit = () => console.log('click')
 
   render() {
     return (
       <div className="App">
         <Navigation />
         <Rank />
-        <ImageLinkForm />
+        <ImageLinkForm onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
       </div>
     );
   }
