@@ -47,19 +47,9 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({imageUrl: this.state.input})
 
-    // app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
-    //  .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
-    //  .catch(err => console.log(err));
-
-    app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input).then(
-    function(response) {
-      console.log(response)
-    },
-    function(err) {
-      console.log("ERRRROOORRRR", err)
-    }
-  );
-
+    app.models.predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
+     .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))
+     .catch(err => console.log(err));
   }
 
   onRouteChange = (route) => {
