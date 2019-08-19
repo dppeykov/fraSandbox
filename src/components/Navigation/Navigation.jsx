@@ -4,7 +4,7 @@ import logo from "./facial-recognition.png";
 
 import "./Navigation.css";
 
-const Navigation = () => (
+const Navigation = ({ display, onRouteChange }) => (
   <div className="navigation-container">
     <div>
       <img
@@ -14,7 +14,9 @@ const Navigation = () => (
         height="90px"
       />
     </div>
-    <div className="sign-in pointer grow">Sign In</div>
+    { display === "signin" ? 
+    null : 
+    <div className="sign-in pointer grow" onClick={() => onRouteChange('signin')}>Sign Out</div>}
   </div>
 );
 
