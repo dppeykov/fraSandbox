@@ -19,7 +19,7 @@ class App extends Component {
 
     this.state = {
       input: '',
-      imageUrl: '',
+      imageUrl: 'http://ericsusch.com/blog1/wp-content/uploads/2018/06/Man-Concentrated-1000x1000.jpg',
     };
   }
 
