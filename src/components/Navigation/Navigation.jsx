@@ -14,9 +14,12 @@ const Navigation = ({ display, onRouteChange }) => (
         height="90px"
       />
     </div>
-    { display === "signin" ? 
-    null : 
-    <div className="sign-in pointer grow" onClick={() => onRouteChange('signin')}>Sign Out</div>}
+    { display !== "home" ? 
+    <div>
+      <div className="sign-in pointer grow" onClick={() => onRouteChange('signin')}>Sign In</div> 
+      <div className="sign-in pointer grow" onClick={() => onRouteChange('register')}>Register</div>
+    </div>
+    : <div className="sign-in pointer grow" onClick={() => onRouteChange('signin')}>Sign Out</div>}
   </div>
 );
 
